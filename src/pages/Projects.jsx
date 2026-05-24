@@ -1,5 +1,5 @@
 import watchgen from "../assets/projects/watchgen.png"
-import RealtyMind from "../assets/projects/RealtyMind.png"
+import RealtyMind from "../assets/projects/temp.png"
 import Techvani from "../assets/projects/Techvani.png"
 import House from "../assets/projects/house.png"
 import Sentimen from "../assets/projects/Sentimen.png"
