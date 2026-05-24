@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 import Navbar from "./components/Navbar"
 import Home from "./pages/Home"
@@ -12,7 +12,18 @@ function App() {
 
   const [section, setSection] = useState("home")
 
+  // Auto Scroll Top on Page Change
+  useEffect(() => {
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    })
+
+  }, [section])
+
   return (
+
     <div>
 
       <Navbar setSection={setSection} />
@@ -22,16 +33,15 @@ function App() {
       {section === "about" && <About />}
 
       {section === "projects" && <Projects />}
-       
 
       {section === "contact" && <Contact />}
 
       {section === "certificates" && <Certificates />}
 
-       <Footer setSection={setSection} />
-      
+      <Footer setSection={setSection} />
 
     </div>
+
   )
 }
 
