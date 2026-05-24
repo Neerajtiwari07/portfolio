@@ -5,7 +5,7 @@ import House from "../assets/projects/house.png"
 import Sentimen from "../assets/projects/Sentimen.png"
 import Employee from "../assets/projects/employee.png"
 import Blog from "../assets/projects/blog.png"
-import Digit from "../assets/projects/digit.png"
+import Digit from "../assets/projects/Digit.png"
 
 import { motion } from "framer-motion"
 
