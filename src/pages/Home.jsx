@@ -1,5 +1,4 @@
 import { motion } from "framer-motion"
-
 import { TypeAnimation } from "react-type-animation"
 
 import {
@@ -13,232 +12,267 @@ import {
 import {
   SiDjango,
   SiTensorflow,
-  SiMysql,
+  SiMongodb,
 } from "react-icons/si"
 
 function Home() {
 
   return (
 
-    <section className="min-h-screen bg-black text-white relative overflow-hidden flex items-center justify-center px-6 py-20">
+    <section className="min-h-screen bg-black text-white overflow-hidden relative">
 
       {/* Background Glow */}
-      <div className="absolute inset-0">
+      <div className="absolute top-0 left-0 w-72 h-72 bg-blue-500/20 blur-[120px] rounded-full"></div>
 
-        <div className="absolute top-20 left-20 w-80 h-80 bg-blue-500 opacity-20 blur-[150px] rounded-full animate-pulse"></div>
+      <div className="absolute bottom-0 right-0 w-72 h-72 bg-purple-500/20 blur-[120px] rounded-full"></div>
 
-        <div className="absolute bottom-20 right-20 w-80 h-80 bg-purple-500 opacity-20 blur-[150px] rounded-full animate-pulse"></div>
+      <div className="max-w-7xl mx-auto px-6 py-24 relative z-10">
 
-      </div>
+        {/* HERO SECTION */}
+        <div className="text-center">
 
-      {/* Floating Icons */}
-      <FaPython className="absolute top-32 left-20 text-7xl text-blue-500 opacity-20 animate-bounce" />
+          {/* Main Heading */}
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-8">
 
-      <FaReact className="absolute bottom-32 left-40 text-8xl text-cyan-400 opacity-20 animate-spin" />
+            <h1 className="text-5xl sm:text-6xl md:text-8xl font-black leading-tight bg-gradient-to-r from-blue-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
 
-      <SiDjango className="absolute top-32 right-24 text-7xl text-green-500 opacity-20 animate-pulse" />
+              Neeraj Tiwari
 
-      <SiTensorflow className="absolute bottom-24 right-32 text-7xl text-orange-500 opacity-20 animate-bounce" />
+            </h1>
 
-      <SiMysql className="absolute top-1/2 left-10 text-7xl text-blue-400 opacity-20 animate-pulse" />
+            <motion.div
+              animate={{
+                y: [0, -15, 0],
+                rotate: [0, 10, -10, 0],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+              }}
+              className="text-6xl md:text-7xl"
+            >
 
-      {/* Main Content */}
-      <div className="max-w-7xl mx-auto text-center relative z-10">
+              🚀
 
-        {/* Small Intro */}
-        <motion.p
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="uppercase tracking-[8px] text-blue-400 text-sm mb-6"
-        >
+            </motion.div>
 
-          Welcome To My Portfolio
+          </div>
 
-        </motion.p>
+          {/* Typing Animation */}
+          <div className="text-2xl md:text-5xl font-bold mb-10 text-blue-400 min-h-[80px]">
 
-        {/* Main Heading */}
-        <motion.h1
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
-          className="text-6xl md:text-8xl font-extrabold leading-tight mb-8"
-        >
+            <TypeAnimation
+              sequence={[
+                "Python Full Stack Developer",
+                2000,
+                "AI/ML Engineer",
+                2000,
+                "Deep Learning Enthusiast",
+                2000,
+                "React & Django Developer",
+                2000,
+              ]}
+              speed={50}
+              repeat={Infinity}
+            />
 
-          <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
+          </div>
 
-            Neeraj Tiwari
+          {/* Description */}
+          <motion.p
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="text-gray-300 text-lg md:text-2xl leading-10 max-w-4xl mx-auto mb-14"
+          >
 
-          </span>
+            Passionate about building intelligent AI-powered applications
+            using Python, Django, React.js, Machine Learning and Deep Learning technologies.
 
-          <span className="inline-block ml-4 animate-bounce">
+          </motion.p>
 
-            🚀
+          {/* Social Icons */}
+          <div className="flex justify-center gap-6 flex-wrap mb-16">
 
-          </span>
+            <a
+              href="https://github.com/Neerajtiwari07"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gray-900 hover:bg-blue-500 p-5 rounded-2xl text-3xl transition duration-300 hover:scale-110"
+            >
 
-        </motion.h1>
+              <FaGithub />
 
-        {/* Typing Animation */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-          className="text-3xl md:text-5xl font-bold mb-10"
-        >
+            </a>
 
-          <TypeAnimation
-            sequence={[
+            <a
+              href="https://www.linkedin.com/in/neeraj-tiwari202082/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gray-900 hover:bg-blue-500 p-5 rounded-2xl text-3xl transition duration-300 hover:scale-110"
+            >
 
-              "AI/ML Engineer 🚀",
-              2000,
+              <FaLinkedin />
 
-              "Python Full Stack Developer 💻",
-              2000,
+            </a>
 
-              "Deep Learning Enthusiast 🤖",
-              2000,
+            <a
+              href="https://instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gray-900 hover:bg-pink-500 p-5 rounded-2xl text-3xl transition duration-300 hover:scale-110"
+            >
 
-              "React & Django Developer ⚡",
-              2000,
+              <FaInstagram />
 
-            ]}
-            wrapper="span"
-            speed={50}
-            repeat={Infinity}
-            className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"
-          />
+            </a>
 
-        </motion.div>
+          </div>
 
-        {/* Description */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1 }}
-          className="max-w-4xl mx-auto text-gray-400 text-lg md:text-2xl leading-10 mb-16"
-        >
+        </div>
 
-          Passionate about building intelligent AI-powered
-          applications using Python, Django, React.js,
-          Machine Learning and Deep Learning technologies.
-
-        </motion.p>
-
-        {/* Premium Cards */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        {/* STATS SECTION */}
+        <div className="grid md:grid-cols-3 gap-8 mt-20">
 
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="backdrop-blur-lg bg-white/5 border border-gray-800 rounded-3xl p-8 shadow-2xl hover:border-blue-500 transition"
+            className="bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-3xl p-10 text-center shadow-2xl"
           >
 
-            <h1 className="text-5xl font-bold text-blue-500 mb-4">
+            <h2 className="text-6xl font-black text-blue-500 mb-5">
+
               10+
-            </h1>
 
-            <p className="text-gray-300 text-lg">
+            </h2>
+
+            <p className="text-gray-300 text-2xl">
+
               Projects Completed
+
             </p>
 
           </motion.div>
 
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="backdrop-blur-lg bg-white/5 border border-gray-800 rounded-3xl p-8 shadow-2xl hover:border-purple-500 transition"
+            className="bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-3xl p-10 text-center shadow-2xl"
           >
 
-            <h1 className="text-5xl font-bold text-purple-400 mb-4">
+            <h2 className="text-6xl font-black text-purple-500 mb-5">
+
               AI
-            </h1>
 
-            <p className="text-gray-300 text-lg">
-              Machine Learning Focus
+            </h2>
+
+            <p className="text-gray-300 text-2xl">
+
+              ML & Deep Learning
+
             </p>
 
           </motion.div>
 
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="backdrop-blur-lg bg-white/5 border border-gray-800 rounded-3xl p-8 shadow-2xl hover:border-cyan-500 transition"
+            className="bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-3xl p-10 text-center shadow-2xl"
           >
 
-            <h1 className="text-5xl font-bold text-cyan-400 mb-4">
-              Full
-            </h1>
+            <h2 className="text-6xl font-black text-cyan-400 mb-5">
 
-            <p className="text-gray-300 text-lg">
-              Stack Development
+              Full Stack
+
+            </h2>
+
+            <p className="text-gray-300 text-2xl">
+
+              Django + React.js
+
             </p>
 
           </motion.div>
 
         </div>
 
-        {/* Tech Stack */}
-        <div className="flex flex-wrap justify-center gap-5 mb-16">
+        {/* TECH STACK */}
+        <div className="mt-28">
 
-          <div className="bg-gray-900 border border-gray-800 px-6 py-4 rounded-2xl hover:border-blue-500 transition">
-            Python
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+
+            Tech
+            <span className="text-blue-500">
+              {" "}Stack
+            </span>
+
+          </h2>
+
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
+
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              className="bg-gray-900 border border-gray-800 rounded-3xl p-8 text-center"
+            >
+
+              <FaPython className="text-6xl text-yellow-400 mx-auto mb-4" />
+
+              <p className="text-xl font-semibold">
+                Python
+              </p>
+
+            </motion.div>
+
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              className="bg-gray-900 border border-gray-800 rounded-3xl p-8 text-center"
+            >
+
+              <SiDjango className="text-6xl text-green-500 mx-auto mb-4" />
+
+              <p className="text-xl font-semibold">
+                Django
+              </p>
+
+            </motion.div>
+
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              className="bg-gray-900 border border-gray-800 rounded-3xl p-8 text-center"
+            >
+
+              <FaReact className="text-6xl text-cyan-400 mx-auto mb-4" />
+
+              <p className="text-xl font-semibold">
+                React.js
+              </p>
+
+            </motion.div>
+
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              className="bg-gray-900 border border-gray-800 rounded-3xl p-8 text-center"
+            >
+
+              <SiTensorflow className="text-6xl text-orange-500 mx-auto mb-4" />
+
+              <p className="text-xl font-semibold">
+                TensorFlow
+              </p>
+
+            </motion.div>
+
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              className="bg-gray-900 border border-gray-800 rounded-3xl p-8 text-center"
+            >
+
+              <SiMongodb className="text-6xl text-green-400 mx-auto mb-4" />
+
+              <p className="text-xl font-semibold">
+                MongoDB
+              </p>
+
+            </motion.div>
+
           </div>
-
-          <div className="bg-gray-900 border border-gray-800 px-6 py-4 rounded-2xl hover:border-blue-500 transition">
-            Django
-          </div>
-
-          <div className="bg-gray-900 border border-gray-800 px-6 py-4 rounded-2xl hover:border-blue-500 transition">
-            React.js
-          </div>
-
-          <div className="bg-gray-900 border border-gray-800 px-6 py-4 rounded-2xl hover:border-blue-500 transition">
-            Machine Learning
-          </div>
-
-          <div className="bg-gray-900 border border-gray-800 px-6 py-4 rounded-2xl hover:border-blue-500 transition">
-            Deep Learning
-          </div>
-
-          <div className="bg-gray-900 border border-gray-800 px-6 py-4 rounded-2xl hover:border-blue-500 transition">
-            TensorFlow
-          </div>
-
-        </div>
-
-        {/* Social Icons */}
-        <div className="flex justify-center gap-6">
-
-          <a
-            href="https://github.com/Neerajtiwari07"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-gray-900 hover:bg-blue-500 p-5 rounded-2xl text-3xl transition duration-300 shadow-xl"
-          >
-
-            <FaGithub />
-
-          </a>
-
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-gray-900 hover:bg-blue-500 p-5 rounded-2xl text-3xl transition duration-300 shadow-xl"
-          >
-
-            <FaLinkedin />
-
-          </a>
-
-          <a
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-gray-900 hover:bg-pink-500 p-5 rounded-2xl text-3xl transition duration-300 shadow-xl"
-          >
-
-            <FaInstagram />
-
-          </a>
 
         </div>
 
