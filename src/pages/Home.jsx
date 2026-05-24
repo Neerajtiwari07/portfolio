@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+
 import { TypeAnimation } from "react-type-animation"
 
 import {
@@ -7,24 +8,32 @@ import {
   FaInstagram,
   FaPython,
   FaReact,
+  FaJs,
 } from "react-icons/fa"
 
 import {
   SiDjango,
   SiTensorflow,
-  SiMongodb,
+  SiMysql,
+  SiSqlite,
 } from "react-icons/si"
 
 function Home() {
 
   return (
 
-    <section className="min-h-screen bg-black text-white overflow-hidden relative">
+    <section className="min-h-screen bg-black text-white overflow-hidden relative z-10">
 
-      {/* Background Glow */}
-      <div className="absolute top-0 left-0 w-72 h-72 bg-blue-500/20 blur-[120px] rounded-full"></div>
+      {/* Animated Background Blobs */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
 
-      <div className="absolute bottom-0 right-0 w-72 h-72 bg-purple-500/20 blur-[120px] rounded-full"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-[120px] animate-pulse"></div>
+
+        <div className="absolute bottom-20 right-10 w-80 h-80 bg-purple-500/20 rounded-full blur-[120px] animate-pulse"></div>
+
+        <div className="absolute top-[40%] left-[35%] w-64 h-64 bg-cyan-500/10 rounded-full blur-[100px] animate-pulse"></div>
+
+      </div>
 
       <div className="max-w-7xl mx-auto px-6 py-24 relative z-10">
 
@@ -207,6 +216,7 @@ function Home() {
 
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
 
+            {/* Python */}
             <motion.div
               whileHover={{ scale: 1.1 }}
               className="bg-gray-900 border border-gray-800 rounded-3xl p-8 text-center"
@@ -220,6 +230,7 @@ function Home() {
 
             </motion.div>
 
+            {/* Django */}
             <motion.div
               whileHover={{ scale: 1.1 }}
               className="bg-gray-900 border border-gray-800 rounded-3xl p-8 text-center"
@@ -232,7 +243,21 @@ function Home() {
               </p>
 
             </motion.div>
+            {/* JavaScript */}
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              className="bg-gray-900 border border-gray-800 rounded-3xl p-8 text-center"
+            >
 
+              <FaJs className="text-6xl text-yellow-400 mx-auto mb-4" />
+
+              <p className="text-xl font-semibold">
+                JavaScript
+              </p>
+
+            </motion.div>
+
+            {/* React */}
             <motion.div
               whileHover={{ scale: 1.1 }}
               className="bg-gray-900 border border-gray-800 rounded-3xl p-8 text-center"
@@ -246,6 +271,86 @@ function Home() {
 
             </motion.div>
 
+            
+
+            {/* MySQL */}
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              className="bg-gray-900 border border-gray-800 rounded-3xl p-8 text-center"
+            >
+
+              <SiMysql className="text-6xl text-blue-500 mx-auto mb-4" />
+
+              <p className="text-xl font-semibold">
+                MySQL
+              </p>
+
+            </motion.div>
+
+            {/* SQLite */}
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              className="bg-gray-900 border border-gray-800 rounded-3xl p-8 text-center"
+            >
+
+              <SiSqlite className="text-6xl text-blue-300 mx-auto mb-4" />
+
+              <p className="text-xl font-semibold">
+                SQLite
+              </p>
+
+            </motion.div>
+
+            
+
+            {/* REST API */}
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              className="bg-gray-900 border border-gray-800 rounded-3xl p-8 text-center"
+            >
+
+              <div className="text-6xl text-green-400 mx-auto mb-4">
+                ⚡
+              </div>
+
+              <p className="text-xl font-semibold">
+                REST APIs
+              </p>
+
+            </motion.div>
+
+            {/* Machine Learning */}
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              className="bg-gray-900 border border-gray-800 rounded-3xl p-8 text-center"
+            >
+
+              <div className="text-6xl text-yellow-500 mx-auto mb-4">
+                🤖
+              </div>
+
+              <p className="text-xl font-semibold">
+                Machine Learning
+              </p>
+
+            </motion.div>
+
+            {/* Deep Learning */}
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              className="bg-gray-900 border border-gray-800 rounded-3xl p-8 text-center"
+            >
+
+              <div className="text-6xl text-red-500 mx-auto mb-4">
+                🧠
+              </div>
+
+              <p className="text-xl font-semibold">
+                Deep Learning
+              </p>
+
+            </motion.div>
+            {/* TensorFlow */}
             <motion.div
               whileHover={{ scale: 1.1 }}
               className="bg-gray-900 border border-gray-800 rounded-3xl p-8 text-center"
@@ -255,19 +360,6 @@ function Home() {
 
               <p className="text-xl font-semibold">
                 TensorFlow
-              </p>
-
-            </motion.div>
-
-            <motion.div
-              whileHover={{ scale: 1.1 }}
-              className="bg-gray-900 border border-gray-800 rounded-3xl p-8 text-center"
-            >
-
-              <SiMongodb className="text-6xl text-green-400 mx-auto mb-4" />
-
-              <p className="text-xl font-semibold">
-                MongoDB
               </p>
 
             </motion.div>
